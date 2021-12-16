@@ -23,7 +23,7 @@ func MakeTree() {
 // readFile returns an integer from merry-christmas.txt that specifies the height of the tree.
 // If file is empty, the tree will default to a height of 25
 func readFile() int {
-	content, err := os.ReadFile("./2021-12-13/merry-christmas.txt")
+	content, err := os.ReadFile("./christmas-tree/merry-christmas.txt")
 	check(err)
 
 	var height int
@@ -48,7 +48,7 @@ func makeBranch(height int, level int) (int, int) {
 
 // writeFile prints an asterisk Christmas tree given the height of the tree.
 func writeFile(height int) {
-	f, err := os.Create("./2021-12-13/happy-holidays.txt")
+	f, err := os.Create("./christmas-tree/happy-holidays.txt")
 	check(err)
 
 	defer f.Close()
